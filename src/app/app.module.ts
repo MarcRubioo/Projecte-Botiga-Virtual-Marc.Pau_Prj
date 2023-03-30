@@ -16,9 +16,10 @@ import { RobaComponent } from './roba/roba.component';
 import { AccesorisComponent } from './accesoris/accesoris.component';
 import { SuplementsComponent } from './suplements/suplements.component';
 import {HttpClientModule} from "@angular/common/http";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { DadesUserComponent } from './dades-user/dades-user.component';
 import {NgbCarousel, NgbRating} from "@ng-bootstrap/ng-bootstrap";
+import { RecaptchaModule , RecaptchaFormsModule} from 'ng-recaptcha';
 
 @NgModule({
   declarations: [
@@ -38,14 +39,18 @@ import {NgbCarousel, NgbRating} from "@ng-bootstrap/ng-bootstrap";
     SuplementsComponent,
     DadesUserComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    NgbRating,
-    NgbCarousel,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+        NgbRating,
+        NgbCarousel,
+        ReactiveFormsModule,
+        FormsModule,
+        RecaptchaModule,
+        RecaptchaFormsModule
+    ],
   providers: [],
   exports: [
     NavegacioComponent,
